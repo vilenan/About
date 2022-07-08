@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+}
+
+.navigation-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 21px;
+  font-weight: 700;
+  transition: text-decoration 2s;
+  &::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    top:100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+

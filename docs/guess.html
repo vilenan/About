@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный сайт Никитчук Вилены</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script type="text/javascript">
+        var answer = parseInt(Math.random() * 100);
+        var tryCount = 0;
+        var maxTryCount = 3;
+
+        function readInt() {
+            var number = document.getElementById("userAnswer").value;
+            return parseInt(number);
+            // return +document.getElementById("userAnswer").value;
+        }
+
+        function write(text) {
+            document.getElementById("info").innerHTML = text;
+        }
+
+        function hide(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function guess() {
+            tryCount++;
+
+            var userAnswer = readInt();
+            if (userAnswer == answer) {
+                write("<b>Поздравляю, вы угадали!</b>");
+                hide("button");
+                hide("userAnswer");
+            } else if (tryCount >= maxTryCount) {
+                write("Вы проиграли<br>Правильный ответ: " + answer);
+                hide("button");
+                hide("userAnswer");
+            } else if (userAnswer > answer) {
+                write("Вы ввели слишком большое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+            } else if (userAnswer < answer) {
+                write("Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+            }
+        }
+    </script>
+</head>
+
+<body class="page-body">
+
+<header class="header">
+    <div class="header-wrapper center">
+        <div class="header-logo">
+            <h1 class="user">Vilena Nickitchuk</h1>
+            <p class="resume">Interactive resume</p>
+        </div>
+        <nav class="navigation">
+            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link" href="puzzle.html">Загадки</a>
+            <a class="navigation-link">Угадайка</a>
+            <a class="navigation-link" href="guess_2.html">Угадайка 2</a>
+            <a class="navigation-link" href="pass.html">Генератор пароля</a>
+        </nav>
+</header>
+
+
+<div class="content">
+    <div class="contentWrap">
+        <div class="content">
+            <div class="center">
+
+                <h2 class="inner-page-title">Игра угадайка</h2>
+
+                <div class="box">
+
+                    <p id="info">Угадайте число от 0 до 100</p>
+                    <input type="text" id="userAnswer">
+                    <br>
+                    <a class="button" href="#" onClick="guess();" id="button">Начать</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="footer">
+    Copyright &copy; Vilena Nikitchuk
+    <div>
+
+
+</body>
+
+</html>

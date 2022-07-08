@@ -1,0 +1,32 @@
+.header {
+  background-color: #22A39F;
+  color: #fff;
+  line-height: 1.2;
+  min-height: 150px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header-logo p {
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+.header-logo h1 {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный сайт Никитчук Вилены</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script type="text/javascript">
+        //случайное число  от 0 до длины пароля
+
+        function readInt() {
+            var number = document.getElementById("userAnswer").value;
+            return parseInt(number);
+        }
+
+        // function write(text) {
+        //     document.getElementById("info").innerHTML = text;
+        // }
+
+        // function hide(id) {
+        //     document.getElementById(id).style.display = "none";
+        // }
+
+        function getPass() {
+            let userAnswer = readInt();
+            let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let x = chars.length;
+            let pass = '';
+
+            for (let i = 0; i < userAnswer; i++) {
+                pass += chars.charAt(Math.floor(Math.random() * x));
+            }
+            document.getElementById("pass_text").innerHTML = pass;
+        }
+    </script>
+</head>
+
+<body class="page-body">
+<header class="header">
+    <div class="header-wrapper center">
+        <div class="header-logo">
+            <h1 class="user">Vilena Nickitchuk</h1>
+            <p class="resume">Interactive resume</p>
+        </div>
+        <nav class="navigation">
+            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link" href="puzzle.html">Загадки</a>
+            <a class="navigation-link" href="guess.html">Угадайка</a>
+            <a class="navigation-link" href="guess_2.html">Угадайка 2</a>
+            <a class="navigation-link">Генератор пароля</a>
+        </nav>
+</header>
+
+
+<div class="content">
+    <div class="contentWrap">
+        <div class="content">
+            <div class="center">
+
+                <h2 class="inner-page-title">Генератор пароля</h2>
+
+                <div class="box">
+
+                    <p id="info">введите длину пароля</p>
+                    <input type="text" id="userAnswer">
+                    <br>
+                    <a class="button" href="#" onClick="getPass();" id="button">Получить пароль</a>
+                    <p>Ваш пароль:</p>
+                    <div id="pass_text"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="footer">
+    Copyright &copy; Vilena Nikitchuk
+    <div>
+
+
+</body>
+
+</html>

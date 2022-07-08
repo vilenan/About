@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный сайт Никитчук Вилены</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script type="text/javascript">
+        var score = 0;
+
+        function checkAnswer(inputId, answers) {
+            var userAnswer = document.getElementById(inputId).value;
+            userAnswer = userAnswer.toLowerCase();
+            for (var i = 0; i < answers.length; i++) {
+                if (userAnswer == answers[i]) {
+                    score++;
+                    break;
+                }
+            }
+        }
+
+        function checkAnswers() {
+
+            checkAnswer("userAnswer1", ["сон", "сноведение"]);
+            checkAnswer("userAnswer2", ["морской", "укус акулы"]);
+            checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
+
+            alert("Вы отгадали " + score + " загадок");
+
+        }
+    </script>
+</head>
+
+<body class="page-body">
+<header class="header">
+    <div class="header-wrapper center">
+        <div class="header-logo">
+            <h1 class="user">Vilena Nickitchuk</h1>
+            <p class="resume">Interactive resume</p>
+        </div>
+        <nav class="navigation">
+            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link">Загадки</a>
+            <a class="navigation-link" href="guess.html">Угадайка</a>
+            <a class="navigation-link" href="guess_2.html">Угадайка 2</a>
+            <a class="navigation-link" href="pass.html">Генератор пароля</a>
+        </nav>
+</header>
+
+<div class="content">
+    <div class="contentWrap">
+        <div class="content">
+            <div class="center">
+
+                <h2 class="inner-page-title">Игра в загадки</h2>
+
+                <div class="box">
+
+                    <p>Что можно увидеть с закрытыми глазами?</p>
+                    <input type="text" id="userAnswer1">
+
+                    <p>Какой болезнью никто не болеет на суше?</p>
+                    <input type="text" id="userAnswer2">
+
+                    <p>Какой конь не ест овса?</p>
+                    <input type="text" id="userAnswer3">
+
+                    <br>
+                    <a class="button" href="#" onClick="checkAnswers();">Ответить</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="footer">
+    Copyright &copy; Vilena Nikitchuk
+    <div>
+
+
+</body>
+
+</html>
