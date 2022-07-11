@@ -10,6 +10,7 @@ const csso= require('postcss-csso');
 const autoprefixer = require('autoprefixer');
 const sourcemap = require('gulp-sourcemaps');
 const webp = require('gulp-webp');
+const terser = require('gulp-terser');
 
 //Html
 const html = ()=> {
@@ -17,8 +18,17 @@ const html = ()=> {
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('build'));
 }
-exports.html = html;
 
+
+//Scripts
+const scripts = ()=> {
+    return gulp.src('docs/js/*.js')
+        .pipe(terser())
+        .pipe(rename('main.min.js'))
+        .pipe(gulp.dest('build/js'))
+        .pipe(browserSync.stream());
+}
+exports.scripts = scripts;
 
 //Styles
 const styles = ()=> {
@@ -104,6 +114,7 @@ const reload = (done) => {
 
 const watcher = () => {
     gulp.watch("docs/sass/**/*.scss", gulp.series(styles));
+    gulp.watch("docs/js/main.js", gulp.series(scripts));
     gulp.watch("docs/*.html", gulp.series(html, reload));
 }
 
@@ -113,6 +124,7 @@ const build = gulp.series(
     optimizeImages,
     gulp.parallel(
         styles,
+        scripts,
         html,
         createWebp
     ),
@@ -129,6 +141,7 @@ exports.default = gulp.series(
     gulp.parallel(
         styles,
         html,
+        scripts,
         createWebp
     ),
     gulp.series(

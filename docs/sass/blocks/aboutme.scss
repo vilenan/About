@@ -19,11 +19,17 @@
 
 .about-me-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 60px;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .about-me-content img {
+  align-self: center;
   width: 389px;
   height: 389px;
   border-radius: 50%;
@@ -38,7 +44,9 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 60px;
-  width: 700px;
+  @media (min-width: 1200px) {
+    width: 700px;
+  }
 }
 
 .about-me-text p {
