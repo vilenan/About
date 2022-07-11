@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный сайт Никитчук Вилены</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script type="text/javascript">
-        let answer = parseInt(Math.random() * 100);
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Личный сайт Никитчук Вилены</title><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/normalize.css"><link rel="stylesheet" href="css/style.min.css"><script type="text/javascript">let answer = parseInt(Math.random() * 100);
         let playNumber = 1;
 
         function readAnswer() {
@@ -53,55 +40,4 @@
             if(playNumber == 1)
                 playNumber = 2;
             else playNumber = 1;
-        }
-    </script>
-</head>
-
-<body class="page-body">
-<header class="header">
-    <div class="header-wrapper center">
-        <div class="header-logo">
-            <h1 class="user">Vilena Nickitchuk</h1>
-            <p class="resume">Interactive resume</p>
-        </div>
-        <nav class="navigation">
-            <a class="navigation-link" href="index.html">Главная</a>
-            <a class="navigation-link" href="puzzle.html">Загадки</a>
-            <a class="navigation-link" href="guess.html">Угадайка</a>
-            <a class="navigation-link">Угадайка 2</a>
-            <a class="navigation-link" href="pass.html">Генератор пароля</a>
-        </nav>
-</header>
-
-
-<div class="content">
-    <div class="contentWrap">
-        <div class="content">
-            <div class="center">
-
-                <h2 class="inner-page-title">Игра угадайка для двух игроков</h2>
-
-                <div class="box">
-
-                    <p id="info">Угадайте число от 0 до 100. Для выхода нажмите q.</p>
-                    <p id="player"></p>
-                    <input type="text" id="userAnswer">
-                    <br>
-                    <a class="button" href="#" onClick="guess();" id="button">Начать</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-<div class="footer">
-    Copyright &copy; Vilena Nikitchuk
-    <div>
-
-
-</body>
-
-</html>
+        }</script></head><body class="page-body"><header class="header header--nav-closed"><div class="header-wrapper center"><div class="header-logo"><h1 class="user">Vilena Nickitchuk</h1><p class="resume">Interactive resume</p></div><nav class="navigation"><a class="navigation-link" href="index.html">Главная</a> <a class="navigation-link" href="puzzle.html">Загадки</a> <a class="navigation-link" href="guess.html">Угадайка</a> <a class="navigation-link navigation-link--current">Угадайка 2</a> <a class="navigation-link" href="pass.html">Генератор пароля</a></nav><button class="header-toggle"><span></span></button></div></header><div class="content"><div class="contentWrap"><div class="content"><div class="center"><h2 class="inner-page-title">Игра угадайка для двух игроков</h2><div class="box"><p id="info">Угадайте число от 0 до 100. Для выхода нажмите q.</p><p id="player"></p><input type="text" id="userAnswer"><br><a class="button" href="#" onclick="guess();" id="button">Начать</a></div></div></div></div></div><div class="footer">Copyright &copy; Vilena Nikitchuk<div><script src="js/main.min.js"></script></div></div></body></html>
