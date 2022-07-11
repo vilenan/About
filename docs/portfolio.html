@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный сайт Никитчук Вилены</title>
-    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,12 +17,12 @@
 <header class="header header--nav-closed">
     <div class="header-wrapper center">
         <div class="header-logo">
-            <h1>Vilena Nickitchuk</h1>
-            <p>Interactive resume</p>
+            <h1 class="user">Vilena Nickitchuk</h1>
+            <p class="resume">Interactive resume</p>
         </div>
         <nav class="navigation">
-            <a class="navigation-link navigation-link--current">Главная</a>
-            <a class="navigation-link" href="portfolio.html">Портфолио</a>
+            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link--current" href="portfolio.html">Портфолио</a>
         </nav>
         <button class="header-toggle">
             <span></span>
@@ -28,21 +30,6 @@
 </header>
 
 <main>
-
-    <div class="about-me-wrapper">
-        <div class="about-me center">
-            <h2 class="about-me-title">Profile</h2>
-            <div class="about-me-content">
-                <img src="img/user.jpg" width="389" height="389">
-                <div class="about-me-text">
-                    <p>Привет! Меня зовут Вилена Никитчук. Я&nbsp;занимаюсь HTML-версткой и продолжаю учиться на frontend-разработчика.</p>
-                    <p>Я&nbsp;изучала верстку на&nbsp;IT-портале GeekBrains и в HTML-академии.</p>
-                    <p class="why-JS">Изучаю JavaScript, чтобы создавать интерактивные сайты.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class=" portfolio center">
         <h2 class="portfolio-title">Portfolio</h2>
         <ul class="portfolio-list">
@@ -72,13 +59,12 @@
             </li>
         </ul>
     </div>
-
 </main>
+<div class="footer">
+    Copyright &copy; Vilena Nikitchuk
+    <div>
 
-<footer class="footer">
-    <p> Copyright &copy; Vilena Nikitchuk</p>
-</footer>
-<script src="js/main.min.js"></script>
+        <script src="js/main.min.js"></script>
 </body>
 
 </html>
