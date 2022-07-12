@@ -1,48 +1,66 @@
 .portfolio {
-  margin-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .portfolio-title{
   color: #22A39F;
   font-size: 54px;
   font-weight: 400;
-  margin-bottom: 40px;
-  margin-top: 40px;
   text-align: center;
 }
 
 .portfolio-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: minmax(auto, 575px) minmax(auto, 575px);
+    gap: 40px;
+  }
 }
 
 .portfolio-item {
-  color: #434242;
-  font-size: 24px;
-  font-weight: 400;
-  text-align: left;
-  margin-top: 25px;
-  margin-bottom: 30px;
+
 }
 
 .portfolio-item-link {
+  position: relative;
+  height: 100%;
   color: #fff;
   display: block;
   font-size: 24px;
   font-weight: 400;
   text-decoration: none;
-  padding: 10px 30px;
-  background-color: #22A39F;
-  border-color: #1c8784;
+  overflow: hidden;
   border-radius: 4px;
   text-align: center;
   transition: background-color 2s, opacity 2s;
-  &:hover {
-    background-color: #1c8784;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1;
   }
-  &:active {
-    opacity: 30%;
+  &:hover::after{
+    opacity: 0.2;
   }
+
+}
+
+.portfolio-item-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

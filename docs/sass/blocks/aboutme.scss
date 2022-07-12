@@ -1,6 +1,9 @@
 .about-me {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .about-me-link {
@@ -13,14 +16,10 @@
   }
 }
 
-.about-me-wrapper {
-  background-color: #fff;
-}
-
 .about-me-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
+  gap: 40px;
   @media (min-width: 1200px) {
     flex-direction: row;
     justify-content: space-between;
@@ -28,7 +27,10 @@
   }
 }
 
-.about-me-content img {
+.about-me-image {
+  @media (max-width: 659px) {
+    display: none;
+  }
   align-self: center;
   width: 389px;
   height: 389px;
@@ -42,8 +44,7 @@
   line-height: 1.64;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 60px;
+
   @media (min-width: 1200px) {
     width: 700px;
   }
@@ -57,7 +58,5 @@
   color: #22A39F;
   font-size: 54px;
   font-weight: 400;
-  margin-bottom: 40px;
-  margin-top: 40px;
   text-align: center;
 }
