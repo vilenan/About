@@ -22,7 +22,7 @@ const html = ()=> {
 
 //Scripts
 const scripts = ()=> {
-    return gulp.src('docs/js/*.js')
+    return gulp.src('docs/js/main.js')
         .pipe(terser())
         .pipe(rename('main.min.js'))
         .pipe(gulp.dest('build/js'))

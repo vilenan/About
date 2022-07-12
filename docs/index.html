@@ -8,6 +8,7 @@
     <title>Личный сайт Никитчук Вилены</title>
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 
 <body class="page-body">
@@ -25,6 +26,7 @@
         <button class="header-toggle">
             <span></span>
         </button>
+    </div>
 </header>
 
 <main>
@@ -39,7 +41,7 @@
             </div>
         </div>
     </div>
-    <div class=" portfolio center">
+    <div class="portfolio center">
         <h2 class="portfolio-title">Portfolio</h2>
         <ul class="portfolio-list">
             <li class="portfolio-item">
@@ -68,6 +70,36 @@
             </li>
         </ul>
     </div>
+<!--    <div class="swiper-section center">-->
+<!--        <div class="swiper">-->
+<!--        &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
+<!--        <div class="swiper-wrapper">-->
+<!--            &lt;!&ndash; Slides &ndash;&gt;-->
+<!--            <div class="swiper-slide">-->
+
+<!--                    <img class="portfolio-item-image" src="img/preview-pink.jpg" alt="Pink">-->
+
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--                    <img class="portfolio-item-image" src="img/preview-agro.jpg" alt="Agro">-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--                    <img class="portfolio-item-image" src="img/prewview-Scandi.jpg" alt="Scandi">-->
+<!--            </div>-->
+<!--            ...-->
+<!--        </div>-->
+<!--        &lt;!&ndash; If we need pagination &ndash;&gt;-->
+<!--        <div class="swiper-pagination"></div>-->
+
+<!--        &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+<!--        <div class="swiper-button-prev"></div>-->
+<!--        <div class="swiper-button-next"></div>-->
+
+<!--        &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
+<!--        <div class="swiper-scrollbar"></div>-->
+<!--    </div>-->
+<!--    </div>-->
+
 
 </main>
 
@@ -75,6 +107,29 @@
     <p> Copyright &copy; Vilena Nikitchuk</p>
 </footer>
 <script src="js/main.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
 </body>
 
 </html>

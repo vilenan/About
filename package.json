@@ -25,5 +25,8 @@
     "gulp-webp": "^4.0.1",
     "postcss-csso": "5.0.1",
     "sass": "^1.53.0"
+  },
+  "dependencies": {
+    "swiper": "^8.3.0"
   }
 }
