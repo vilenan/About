@@ -4,13 +4,14 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const plumber= require('gulp-plumber');
 const postcss = require('gulp-postcss');
-const htmlmin = require("gulp-htmlmin");
+const htmlmin = require('gulp-htmlmin');
 const del = require('del');
 const csso= require('postcss-csso');
 const autoprefixer = require('autoprefixer');
 const sourcemap = require('gulp-sourcemaps');
 const webp = require('gulp-webp');
 const terser = require('gulp-terser');
+const squoosh = require('gulp-libsquoosh');
 
 //Html
 const html = ()=> {

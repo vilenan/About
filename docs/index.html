@@ -4,20 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный сайт Никитчук Вилены</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+        Личный сайт Никитчук Вилены
+    </title>
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-
 </head>
 
 <body class="page-body">
-
 <header class="header header--nav-closed">
     <div class="header-wrapper center">
         <div class="header-logo">
-            <h1>Vilena Nickitchuk</h1>
-            <p>Interactive resume</p>
+            <h1>
+                Vilena Nickitchuk
+            </h1>
+            <p>
+                Interactive resume
+            </p>
         </div>
         <nav class="navigation">
             <a class="navigation-link navigation-link--current">Главная</a>
@@ -28,107 +32,73 @@
         </button>
     </div>
 </header>
-
 <main>
     <div class="about-me center">
-        <h2 class="about-me-title">Profile</h2>
         <div class="about-me-content">
-            <img class="about-me-image" src="img/user.jpg" width="389" height="389">
+            <picture>
+                <source type="image/webp" srcset="img/user.webp 1x, img/user@2x.webp 2x">
+                <img class="about-me-image" src="img/user.jpg" srcset="img/user@2x.jpg 2x" width="389" height="389" alt="">
+            </picture>
             <div class="about-me-text">
-                <p>Привет! Меня зовут Вилена Никитчук. Я&nbsp;занимаюсь HTML-версткой и продолжаю учиться на frontend-разработчика.</p>
-                <p>Я&nbsp;изучала верстку на&nbsp;IT-портале GeekBrains и в HTML-академии.</p>
-                <p class="why-JS">Изучаю JavaScript, чтобы создавать интерактивные сайты.</p>
+                <p>
+                    Привет! Меня зовут Вилена Никитчук. Я&nbsp;занимаюсь <nobr>HTML-версткой</nobr> и продолжаю
+                    учиться на <nobr>frontend-разработчика</nobr>.
+                </p>
+                <p>
+                    Я&nbsp;изучала верстку на&nbsp;<nobr>IT-портале</nobr> GeekBrains и в <nobr>HTML-академии</nobr>.
+                </p>
+                <p class="why-JS">
+                    Изучаю JavaScript, чтобы создавать интерактивные сайты.
+                </p>
+                <a href="downloads/CV.pdf" class="about-me-cv button" download>Скачать резюме</a>
             </div>
         </div>
+        <div class="slider">
+            <div class="slider-item slider-item--current">
+                <picture>
+                    <source srcset="img/preview-pink.webp 1x, img/preview-pink@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-pink.jpg" srcset="img/preview-pink@2x.jpg 2x" alt="Pink">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-maycoon.webp 1x, img/preview-maycoon@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-maycoon.jpg" srcset="img/preview-maycoon@2x.jpg 2x" alt="Pink">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-cat.webp 1x, img/preview-cat@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-cat.jpg" srcset="img/preview-cat@2x.jpg 2x" alt="Cats">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-agro.webp 1x, img/preview-agro@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-agro.jpg" srcset="img/preview-agro@2x.jpg 2x" alt="Agro">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/prewview-Scandi.webp 1x, img/prewview-Scandi@2x.webp 2x">
+                    <img class="slider-image" src="img/prewview-Scandi.jpg" alt="Scandi" srcset="img/prewview-Scandi@2x.jpg 2x">
+                </picture>
+            </div>
+            <button class="slider-btn slider-btn--prev" type="button" disabled="disabled">
+                <img src="img/next-arrow-blue.svg" height="20" alt="next">
+            </button>
+            <button class="slider-btn slider-btn--next" type="button">
+                <img src="img/next-arrow-blue.svg" height="20" alt="previous">
+            </button>
+        </div>
     </div>
-    <div class="portfolio center">
-        <h2 class="portfolio-title">Portfolio</h2>
-        <ul class="portfolio-list">
-            <li class="portfolio-item">
-                <a class="portfolio-item-link"
-                   href="https://vilenan.github.io/Pink/"
-                   target="_blank">
-                    <img class="portfolio-item-image" src="img/preview-pink.jpg" alt="Pink">
-                </a>
-            </li>
-            <li class="portfolio-item">
-                <a class="portfolio-item-link"
-                   href="https://vilenan.github.io/Cats-energy/"
-                   target="_blank">
-                    <img class="portfolio-item-image" src="img/preview-cat.jpg" alt="Cats">
-                </a>
-            </li>
-            <li class="portfolio-item">
-                <a class="portfolio-item-link" href="https://vilenan.github.io/MY_AGRO/#">
-                    <img class="portfolio-item-image" src="img/preview-agro.jpg" alt="Agro">
-                </a>
-            </li>
-            <li class="portfolio-item">
-                <a class="portfolio-item-link" href="https://vilenan.github.io/Scandi/#">
-                    <img class="portfolio-item-image" src="img/prewview-Scandi.jpg" alt="Scandi">
-                </a>
-            </li>
-        </ul>
-    </div>
-<!--    <div class="swiper-section center">-->
-<!--        <div class="swiper">-->
-<!--        &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
-<!--        <div class="swiper-wrapper">-->
-<!--            &lt;!&ndash; Slides &ndash;&gt;-->
-<!--            <div class="swiper-slide">-->
-
-<!--                    <img class="portfolio-item-image" src="img/preview-pink.jpg" alt="Pink">-->
-
-<!--            </div>-->
-<!--            <div class="swiper-slide">-->
-<!--                    <img class="portfolio-item-image" src="img/preview-agro.jpg" alt="Agro">-->
-<!--            </div>-->
-<!--            <div class="swiper-slide">-->
-<!--                    <img class="portfolio-item-image" src="img/prewview-Scandi.jpg" alt="Scandi">-->
-<!--            </div>-->
-<!--            ...-->
-<!--        </div>-->
-<!--        &lt;!&ndash; If we need pagination &ndash;&gt;-->
-<!--        <div class="swiper-pagination"></div>-->
-
-<!--        &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
-<!--        <div class="swiper-button-prev"></div>-->
-<!--        <div class="swiper-button-next"></div>-->
-
-<!--        &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
-<!--        <div class="swiper-scrollbar"></div>-->
-<!--    </div>-->
-<!--    </div>-->
-
-
 </main>
-
 <footer class="footer">
-    <p> Copyright &copy; Vilena Nikitchuk</p>
+    <p>
+        Copyright &copy; Vilena Nikitchuk
+    </p>
 </footer>
-<script src="js/main.min.js"></script>
-<script>
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
+<script src="js/main.min.js">
 </script>
 </body>
 
