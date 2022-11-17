@@ -20,7 +20,6 @@ const html = ()=> {
         .pipe(gulp.dest('build'));
 }
 
-
 //Scripts
 const scripts = ()=> {
     return gulp.src('docs/js/main.js')
