@@ -10,6 +10,7 @@ toggler.addEventListener('click', () => {
         header.classList.remove('header--nav-opened');
         body.classList.remove('page-body--hidden');
         header.classList.add('header--nav-closed');
+        body.style.overflow = 'auto';
     } else {
         header.classList.add('header--nav-opened');
         body.classList.add('page-body--hidden');
