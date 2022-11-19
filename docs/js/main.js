@@ -49,3 +49,13 @@ const onPrevBtnClick = () => {
     };
 btnNext.addEventListener('click', onNextBtnClick);
 btnPrev.addEventListener('click', onPrevBtnClick);
+
+const swiper = new Swiper('.achievements-slider', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: 'true',
+        dynamicBullets: 'true',
+    },
+});
