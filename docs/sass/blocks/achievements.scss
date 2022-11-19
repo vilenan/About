@@ -1,0 +1,32 @@
+.achievements-slider {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.achievements-slider.swiper{
+  height: 600px;
+  @media (max-width: 659px) {
+    width: 300px;
+  }
+}
+
+.achievements-slider-list {
+  list-style: none;
+}
+
+.achievements-slider-item {
+  text-align: center;
+}
+
+.achievements-slider-image {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.achievements-slider-pagination .swiper-pagination-bullet {
+  background-color: #22A39F;
+  width: 20px;
+  height: 20px;
+}
+
