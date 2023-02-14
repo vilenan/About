@@ -1,27 +1,50 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
-const browserSync = require('browser-sync').create();
 const plumber= require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const htmlmin = require('gulp-htmlmin');
-const del = require('del');
-const csso= require('postcss-csso');
-const autoprefixer = require('autoprefixer');
 const sourcemap = require('gulp-sourcemaps');
-const webp = require('gulp-webp');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const csso= require('postcss-csso');
+const rename = require('gulp-rename');
+const htmlmin = require('gulp-htmlmin');
 const terser = require('gulp-terser');
-const squoosh = require('gulp-libsquoosh');
+const imagemin = require("gulp-imagemin");
+const webp = require('gulp-webp');
+const svgstore = require("gulp-svgstore");
+const del = require('del');
+const browserSync = require('browser-sync').create();
+
+//Styles
+
+const styles = () => {
+    return gulp.src('docs/sass/style.scss')
+        .pipe(plumber())
+        .pipe(sourcemap.init())
+        .pipe(sass())
+        .pipe(postcss([
+            autoprefixer(),
+            csso()
+        ]))
+        .pipe(rename('style.min.css'))
+        .pipe(sourcemap.write("."))
+        .pipe(gulp.dest("build/css"))
+        .pipe(browserSync.stream());
+}
+exports.styles = styles;
 
 //Html
-const html = ()=> {
+
+const html = () => {
     return gulp.src('docs/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('build'));
 }
 
+exports.html = html;
+
 //Scripts
-const scripts = ()=> {
+
+const scripts = () => {
     return gulp.src('docs/js/main.js')
         .pipe(terser())
         .pipe(rename('main.min.js'))
@@ -30,26 +53,18 @@ const scripts = ()=> {
 }
 exports.scripts = scripts;
 
-//Styles
-const styles = ()=> {
-    return gulp.src('docs/sass/style.scss')
-        .pipe(plumber())
-        .pipe(sourcemap.init())
-        .pipe(sass())
-        .pipe(postcss([autoprefixer(), csso()]))
-        .pipe(rename('style.min.css'))
-        .pipe(sourcemap.write("."))
-        .pipe(gulp.dest("build/css"))
-        .pipe(browserSync.stream());
-}
-exports.styles = styles;
-
 // Images
+
 const optimizeImages = () => {
     return gulp.src("docs/img/**/*.{png,jpg,svg}")
-        .pipe(squoosh())
+        .pipe(imagemin([
+            imagemin.mozjpeg({ progressive: true }),
+            imagemin.optipng({ optimizationLevel: 3 }),
+            imagemin.svgo()
+        ]))
         .pipe(gulp.dest("build/img"))
 }
+
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
