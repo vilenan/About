@@ -3,17 +3,20 @@
   "description": "личный сайт",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vilenan/my_site.git"
   },
-  "homepage": "https://github.com/vilenan/my_site#readme",
+  "homepage": "https://vilenan.github.io/About",
   "devDependencies": {
     "autoprefixer": "10.4.13",
     "browser-sync": "2.27.11",
     "del": "^6.0.0",
+    "gh-pages": "^5.0.0",
     "gulp": "4.0.2",
     "gulp-htmlmin": "5.0.1",
     "gulp-imagemin": "^7.1.0",
