@@ -2,6 +2,39 @@
   background-color: #333;
   text-align: center;
   color: #a4a4a4;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (min-width: 1200px) {
+  .footer-item:not(:last-child) {
+    margin-right: 100px;
+  }
+}
+
+.footer h3 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-link:hover {
+  color: #22a39f;
 }
