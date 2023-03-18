@@ -30,7 +30,7 @@
 .button {
   color: #fff;
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   text-decoration: none;
   padding: 10px 30px;
@@ -41,6 +41,11 @@
   width: 300px;
   margin-top: 30px;
   transition: background-color .5s, opacity .5s;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
+
   &:hover {
     background-color: #1c8784;
   }
