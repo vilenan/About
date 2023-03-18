@@ -32,9 +32,11 @@
         </button>
     </div>
 </header>
-<main>
-    <div class="about-me center">
+
+<main class="main">
+    <section class="main__block center about-me">
         <div class="about-me-content">
+            <h2 class="visually-hidden">Обо мне</h2>
             <picture>
                 <source type="image/webp" srcset="img/user.webp 1x, img/user@2x.webp 2x">
                 <img class="about-me-image" src="img/user.jpg" srcset="img/user@2x.jpg 2x" width="389" height="389" alt="">
@@ -47,101 +49,104 @@
                     Я&nbsp;изучала верстку в GeekBrains и в <nobr>HTML Академии</nobr>.
                 </p>
                 <p class="why-JS">
-                    Слежу за&nbsp;тенденциями фронтенда на&nbsp;канале &laquo;<nobr>Вэб-стандарты</nobr>&raquo;. Читаю &laquo;CSS-TRICKS&raquo;, &laquo;CSS-live&raquo;, &laquo;ДОКА&raquo;.
-                    Люблю смотреть ролики Академии Яндекса на YouTube - всегда есть чему учиться.
+                    Хочется максимально реализовать свои способности в крутом или потенциально крутом продукте.
+                    Хочется расти и учиться.
                 </p>
                 <a href="downloads/CV.pdf" class="about-me-cv button" download>Скачать резюме</a>
             </div>
         </div>
-        <div class="slider">
-            <div class="slider-wrapper">
-                <div class="slider-item slider-item--current">
-                    <picture>
-                        <source srcset="img/preview-pink.webp 1x, img/preview-pink@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-pink.jpg" srcset="img/preview-pink@2x.jpg 2x" alt="Pink">
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/preview-maycoon.webp 1x, img/preview-maycoon@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-maycoon.jpg" srcset="img/preview-maycoon@2x.jpg 2x" alt="сайт питомника Мейкунов">
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/preview-cat.webp 1x, img/preview-cat@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-cat.jpg" srcset="img/preview-cat@2x.jpg 2x" alt="Cats">
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/preview-agro.webp 1x, img/preview-agro@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-agro.jpg" srcset="img/preview-agro@2x.jpg 2x" alt="Agro">
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/prewview-Scandi.webp 1x, img/prewview-Scandi@2x.webp 2x">
-                        <img class="slider-image" src="img/prewview-Scandi.jpg" srcset="img/prewview-Scandi@2x.jpg 2x" alt="Scandi" >
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/atlantis@1x.webp 1x, img/atlantis@2x.webp 2x">
-                        <img class="slider-image" src="img/atlantis@1x.jpg" srcset="img/atlantis@2x.jpg 2x" alt="лендинг строительной компании Atlantis" >
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/preview-kekstagram@1x.webp 1x, img/preview-kekstagram@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-kekstagram@1x.jpg" srcset="img/preview-kekstagram@2x.jpg 2x" alt="приложение для редактирования фото" >
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source srcset="img/preview-big-trip.webp 1x, img/preview_big-trip@2x.webp 2x">
-                        <img class="slider-image" src="img/preview-big-trip.jpg" srcset="img/preview_big-trip@2x.jpg 2x" alt="приложение для планирования путешествия" >
-                    </picture>
-                </div>
+    </section>
+    <section class="main__block center slider">
+        <h2 class="visually-hidden">Мои работы</h2>
+        <div class="slider-wrapper">
+            <div class="slider-item slider-item--current">
+                <picture>
+                    <source srcset="img/preview-pink.webp 1x, img/preview-pink@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-pink.jpg" srcset="img/preview-pink@2x.jpg 2x" alt="Pink">
+                </picture>
             </div>
-
-            <button class="slider-btn slider-btn--prev" type="button" disabled="disabled"></button>
-            <button class="slider-btn slider-btn--next" type="button"></button>
-        </div>
-        <div class="achievements">
-            <div class="achievements-slider swiper">
-                <ul class="achievements-slider-list swiper-wrapper">
-                    <li class="achievements-slider-item swiper-slide">
-                        <picture>
-                            <source srcset="img/certificate-level-1.webp 1x, img/certificate-level-1@2x.webp 2x">
-                            <img class="achievements-slider-image" src="img/certificate-level-1.jpg" srcset="img/certificate-level-1@2x.jpg 2x" alt="сертификат о прохождении курса. HTML и CSS. Профессиональная вёрстка сайтов">
-                        </picture>
-                    </li>
-                    <li class="achievements-slider-item swiper-slide">
-                        <picture>
-                            <source srcset="img/certificate-level-2.webp 1x, img/certificate-level-2@2x.webp 2x">
-                            <img class="achievements-slider-image" src="img/certificate-level-2.jpg" srcset="img/certificate-level-2@2x.jpg 2x" alt="сертификат о прохождении курса. HTML и CSS. Адаптивная вёрстка и автоматизация">
-                        </picture>
-                    </li>
-                    <li class="achievements-slider-item swiper-slide">
-                        <picture>
-                            <source srcset="img/certificate-level-3.webp 1x, img/certificate-level-3@2x.webp 2x">
-                            <img class="achievements-slider-image" src="img/certificate-level-3.jpg" srcset="img/certificate-level-3@2x.jpg 2x" alt="сертификат о прохождении курса. Java Script. Профессиональная разработка веб-интерфейсов">
-                        </picture>
-                    </li>
-                    <li class="achievements-slider-item swiper-slide">
-                        <picture>
-                            <source srcset="img/certificate-level-4.webp 1x, img/certificate-level-4@2x.webp 2x">
-                            <img class="achievements-slider-image" src="img/certificate-level-4.jpg" srcset="img/certificate-level-4@2x.jpg 2x" alt="сертификат о прохождении курса. Java Script. Архитектура клиентских приложений">
-                        </picture>
-                    </li>
-                </ul>
-                <div class="achievements-slider-pagination swiper-pagination"></div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-maycoon.webp 1x, img/preview-maycoon@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-maycoon.jpg" srcset="img/preview-maycoon@2x.jpg 2x" alt="сайт питомника Мейкунов">
+                </picture>
             </div>
-
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-cat.webp 1x, img/preview-cat@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-cat.jpg" srcset="img/preview-cat@2x.jpg 2x" alt="Cats">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-agro.webp 1x, img/preview-agro@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-agro.jpg" srcset="img/preview-agro@2x.jpg 2x" alt="Agro">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/prewview-Scandi.webp 1x, img/prewview-Scandi@2x.webp 2x">
+                    <img class="slider-image" src="img/prewview-Scandi.jpg" srcset="img/prewview-Scandi@2x.jpg 2x" alt="Scandi" >
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/atlantis@1x.webp 1x, img/atlantis@2x.webp 2x">
+                    <img class="slider-image" src="img/atlantis@1x.jpg" srcset="img/atlantis@2x.jpg 2x" alt="лендинг строительной компании Atlantis" >
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-kekstagram@1x.webp 1x, img/preview-kekstagram@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-kekstagram@1x.jpg" srcset="img/preview-kekstagram@2x.jpg 2x" alt="приложение для редактирования фото" >
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                    <source srcset="img/preview-big-trip.webp 1x, img/preview_big-trip@2x.webp 2x">
+                    <img class="slider-image" src="img/preview-big-trip.jpg" srcset="img/preview_big-trip@2x.jpg 2x" alt="приложение для планирования путешествия" >
+                </picture>
+            </div>
         </div>
-    </div>
+
+        <button class="slider-btn slider-btn--prev" type="button" disabled="disabled"></button>
+        <button class="slider-btn slider-btn--next" type="button"></button>
+    </section>
+    <section class="main__block center achievements">
+        <h2 class="visually-hidden">Мое образование</h2>
+        <div class="achievements-slider swiper">
+            <ul class="achievements-slider-list swiper-wrapper">
+                <li class="achievements-slider-item swiper-slide">
+                    <picture>
+                        <source srcset="img/certificate-level-1.webp 1x, img/certificate-level-1@2x.webp 2x">
+                        <img class="achievements-slider-image" src="img/certificate-level-1.jpg" srcset="img/certificate-level-1@2x.jpg 2x" alt="сертификат о прохождении курса. HTML и CSS. Профессиональная вёрстка сайтов">
+                    </picture>
+                </li>
+                <li class="achievements-slider-item swiper-slide">
+                    <picture>
+                        <source srcset="img/certificate-level-2.webp 1x, img/certificate-level-2@2x.webp 2x">
+                        <img class="achievements-slider-image" src="img/certificate-level-2.jpg" srcset="img/certificate-level-2@2x.jpg 2x" alt="сертификат о прохождении курса. HTML и CSS. Адаптивная вёрстка и автоматизация">
+                    </picture>
+                </li>
+                <li class="achievements-slider-item swiper-slide">
+                    <picture>
+                        <source srcset="img/certificate-level-3.webp 1x, img/certificate-level-3@2x.webp 2x">
+                        <img class="achievements-slider-image" src="img/certificate-level-3.jpg" srcset="img/certificate-level-3@2x.jpg 2x" alt="сертификат о прохождении курса. Java Script. Профессиональная разработка веб-интерфейсов">
+                    </picture>
+                </li>
+                <li class="achievements-slider-item swiper-slide">
+                    <picture>
+                        <source srcset="img/certificate-level-4.webp 1x, img/certificate-level-4@2x.webp 2x">
+                        <img class="achievements-slider-image" src="img/certificate-level-4.jpg" srcset="img/certificate-level-4@2x.jpg 2x" alt="сертификат о прохождении курса. Java Script. Архитектура клиентских приложений">
+                    </picture>
+                </li>
+            </ul>
+            <div class="achievements-slider-pagination swiper-pagination"></div>
+        </div>
+
+    </section>
 </main>
+
 <footer class="footer">
     <div class="footer-wrapper center">
         <div class="footer-item">

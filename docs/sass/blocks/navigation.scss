@@ -39,7 +39,7 @@
   text-decoration: none;
   font-size: 60px;
   line-height: 100%;
-  font-weight: 700;
+  font-weight: 400;
   transition: color .2s ease, opacity .3s ease;
   opacity: 0
 }
@@ -52,13 +52,13 @@
   .navigation-link {
     opacity: 1;
     margin-left: 20px;
-    font-size: 20px
+    font-size: 26px
   }
 
   .navigation-link::after {
     position: absolute;
     content: "";
-    height: 4px;
+    height: 2px;
     width: 100%;
     background-color: #fff;
     top: 100%;
