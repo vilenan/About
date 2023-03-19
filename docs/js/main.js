@@ -1,5 +1,5 @@
 const header = document.querySelector('.header');
-const toggler = document.querySelector('.header-toggle');
+const toggler = document.querySelector('.header__toggle');
 const body = document.querySelector('.page-body');
 const btnPrev = document.querySelector('.slider-btn--prev');
 const btnNext = document.querySelector('.slider-btn--next');

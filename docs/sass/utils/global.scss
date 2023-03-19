@@ -38,11 +38,12 @@
   border-color: #1c8784;
   border-radius: 4px;
   text-align: center;
-  width: 300px;
+  width: 280px;
   margin-top: 30px;
   transition: background-color .5s, opacity .5s;
 
   @media (min-width: 1200px) {
+    width: 300px;
     font-size: 24px;
   }
 

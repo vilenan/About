@@ -20,21 +20,15 @@
 
 .about__image {
   position: relative;
+  width: 289px;
   align-self: center;
   display: flex;
   max-width: 100%;
-  //height: 389px;
-  //border-radius: 50%;
   -o-object-position: center;
   object-position: center;
   -o-object-fit: cover;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
-
-  @media (min-width: 767px) {
-
-    width: 289px;
-  }
 
   @media (min-width: 1200px) {
     width: 389px;
@@ -46,8 +40,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
   padding-top: 30px;
 
   @media (min-width: 768px) {
@@ -69,11 +61,9 @@
   font-size: 18px;
   text-align: center;
 
-
   @media (min-width: 768px) {
     text-align: left;
   }
-
 
   @media (min-width: 1200px) {
     font-size: 24px;
