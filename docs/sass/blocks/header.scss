@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.header__logo {
+  z-index: 100;
+}
+
 .header__logo svg {
   width: 200px;
 

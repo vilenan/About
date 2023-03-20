@@ -1,5 +1,4 @@
 .navigation {
-  background-color: #22a39f;
   top: 0;
   position: fixed;
   bottom: 0;
@@ -24,6 +23,7 @@
 }
 
 .header--nav-opened .navigation {
+  background: linear-gradient(168.68deg,#00d7b9 0,#00bdd7 104.17%);
   transform: translateY(0);
   transition: transform .2s ease
 }
@@ -31,51 +31,43 @@
 .navigation__link {
   position: relative;
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #fff;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 52px;
   line-height: 100%;
-  font-weight: 400;
+  font-weight: 700;
   transition: color .2s ease, opacity .3s ease;
   opacity: 0;
 
-  &[href]:hover {
-    color: #01D3C5;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .3s, transform .3s
   }
 
-  &--current {
-    color: #01D3C5;
+  &--current::after {
+    opacity: 1;
+    transform: translateY(0)
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(0)
   }
 
   @media (min-width: 1200px) {
     opacity: 1;
     margin-left: 20px;
     font-size: 24px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 100%;
-      background-color: #fff;
-      top: 100%;
-      left: 0;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity .3s, transform .3s
-    }
-
-    &--current::after {
-      opacity: 1;
-      transform: translateY(0)
-    }
-
-    &:hover::after {
-      opacity: 1;
-      transform: translateY(0)
-    }
   }
 }
 
@@ -85,7 +77,12 @@
 
 .header--nav-opened .navigation__link:nth-child(1) {
   transition-property: opacity;
-  transition-delay: .3s
+  transition-delay: .3s;
+  margin-bottom: 10px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .header--nav-opened .navigation__link:nth-child(2) {
