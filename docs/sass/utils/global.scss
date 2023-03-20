@@ -34,8 +34,7 @@
   font-weight: 400;
   text-decoration: none;
   padding: 10px 30px;
-  background-color: #22A39F;
-  border-color: #1c8784;
+  background: linear-gradient(168.68deg, #00D7B9 0%, #00BDD7 104.17%);
   border-radius: 4px;
   text-align: center;
   width: 280px;
@@ -48,7 +47,7 @@
   }
 
   &:hover {
-    background-color: #1c8784;
+    background: linear-gradient(168.68deg, #00BDD7 0%, #00D7B9 104.17%);
   }
   &:active {
     opacity: 30%;

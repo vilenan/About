@@ -19,10 +19,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
-
 
 .header--nav-opened .navigation {
   transform: translateY(0);
@@ -40,41 +39,43 @@
   line-height: 100%;
   font-weight: 400;
   transition: color .2s ease, opacity .3s ease;
-  opacity: 0
-}
+  opacity: 0;
 
-.navigation__link[href]:hover {
-  color: #f3efe0
-}
+  &[href]:hover {
+    color: #01D3C5;
+  }
 
-@media (min-width: 1200px) {
-  .navigation__link {
+  &--current {
+    color: #01D3C5;
+  }
+
+  @media (min-width: 1200px) {
     opacity: 1;
     margin-left: 20px;
-    font-size: 24px
-  }
+    font-size: 24px;
 
-  .navigation__link::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity .3s, transform .3s
-  }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .3s, transform .3s
+    }
 
-  .navigation__link--current::after {
-    opacity: 1;
-    transform: translateY(0)
-  }
+    &--current::after {
+      opacity: 1;
+      transform: translateY(0)
+    }
 
-  .navigation__link:focus::after, .navigation__link:hover::after {
-    opacity: 1;
-    transform: translateY(0)
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(0)
+    }
   }
 }
 
