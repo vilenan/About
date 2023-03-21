@@ -7,6 +7,7 @@
 }
 
 .about__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,5 +68,28 @@
 
   @media (min-width: 1200px) {
     font-size: 24px;
+  }
+}
+
+.about__rotate {
+  display: none;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  @media (min-width: 1200px) {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
   }
 }
