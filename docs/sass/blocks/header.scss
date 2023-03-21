@@ -21,14 +21,6 @@
   z-index: 100;
 }
 
-.header__logo svg {
-  width: 200px;
-
-  @media (min-width: 768px) {
-    width: 275px;
-  }
-}
-
 .header__toggle {
   position: absolute;
   width: 20px;

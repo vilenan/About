@@ -7,10 +7,25 @@
 
 .footer-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   padding-bottom: 30px;
   padding-top: 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .footer-item {
@@ -28,7 +43,7 @@
 .footer h3 {
   font-size: 16px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
 
   @media (min-width: 768px) {
     font-size: 20px;
