@@ -1,6 +1,6 @@
 .portfolio {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 40px
@@ -14,13 +14,13 @@
   .portfolio-list {
     display: grid;
     grid-template-columns:minmax(auto, 575px) minmax(auto, 575px);
-    gap: 40px
+    gap: 12px;
   }
 }
 
 .portfolio-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   overflow: hidden;
   border-radius: 12px;
   height: 350px;

@@ -21,7 +21,7 @@
 
 .about__image {
   position: relative;
-  width: 289px;
+  width: 100%;
   align-self: center;
   display: flex;
   max-width: 100%;
@@ -30,6 +30,11 @@
   -o-object-fit: cover;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
+  border-radius: 12px;
+
+  @media (min-width: 768px) {
+    width: 289px;
+  }
 
   @media (min-width: 1200px) {
     width: 389px;
@@ -42,6 +47,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  border-radius: 12px;
 
   @media (min-width: 768px) {
     max-width: 600px;
