@@ -51,10 +51,11 @@
 
   @media (min-width: 768px) {
     max-width: 600px;
-    border: 1px solid #22A39F;
     padding: 50px 30px 50px 200px;
     margin-left: -150px;
     align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(74,34,137,0.15);
   }
 
   @media (min-width: 1200px) {
