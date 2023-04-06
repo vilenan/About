@@ -1,11 +1,12 @@
 const header = document.querySelector('.header');
-const toggler = document.querySelector('.header__toggle');
+const toggle = document.querySelector('.header__toggle');
 const body = document.querySelector('.page-body');
 const btnPrev = document.querySelector('.slider-btn--prev');
 const btnNext = document.querySelector('.slider-btn--next');
 const slides = document.querySelectorAll('.slider-item');
+const progressBar = header.querySelector('.header__progressBar');
 
-toggler.addEventListener('click', () => {
+toggle.addEventListener('click', () => {
     if(header.classList.contains('header--nav-opened')){
         header.classList.remove('header--nav-opened');
         body.classList.remove('page-body--hidden');
@@ -18,6 +19,18 @@ toggler.addEventListener('click', () => {
         header.classList.remove('header--nav-closed');
     }
 });
+
+const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener('scroll', scrollHandler);
+function scrollHandler() {
+
+    const windowScroll = window.scrollY;
+
+    const progressBarWidth = (windowScroll / windowHeight).toFixed(2);
+    progressBar.setAttribute('style', `transform: scaleX(${progressBarWidth})`);
+    console.log(progressBarWidth);
+}
 
 let counter = 0;
 const maxStep = slides.length - 1;

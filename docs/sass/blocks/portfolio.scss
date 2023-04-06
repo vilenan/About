@@ -1,17 +1,19 @@
 .portfolio {
-  padding-top: 30px;
+  padding-top: 150px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px
+  gap: 40px;
+
+  @media (min-width: 768px) {
+    padding-top: 180px;
+  }
 }
 
 .portfolio-list {
-  list-style: none
-}
+  list-style: none;
 
-@media (min-width: 1200px) {
-  .portfolio-list {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns:minmax(auto, 575px) minmax(auto, 575px);
     gap: 12px;
@@ -25,6 +27,10 @@
   border-radius: 12px;
   height: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0
+  }
 }
 
 .portfolio-item::after {
@@ -42,12 +48,6 @@
 
 .portfolio-item:hover::after {
   opacity: 0
-}
-
-@media (min-width: 1200px) {
-  .portfolio-item {
-    margin-bottom: 0
-  }
 }
 
 .portfolio-item-link {
