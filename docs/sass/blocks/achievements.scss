@@ -1,3 +1,13 @@
+.achievements {
+  opacity: 0;
+  transform: translateY(7em);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .achievements-slider {
   position: relative;
   padding-bottom: 50px;

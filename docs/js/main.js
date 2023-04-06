@@ -5,6 +5,8 @@ const btnPrev = document.querySelector('.slider-btn--prev');
 const btnNext = document.querySelector('.slider-btn--next');
 const slides = document.querySelectorAll('.slider-item');
 const progressBar = header.querySelector('.header__progressBar');
+const slider = document.querySelector('.slider');
+const achievements = document.querySelector('.achievements');
 
 toggle.addEventListener('click', () => {
     if(header.classList.contains('header--nav-opened')){
@@ -23,14 +25,32 @@ toggle.addEventListener('click', () => {
 const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 window.addEventListener('scroll', scrollHandler);
+
 function scrollHandler() {
-
     const windowScroll = window.scrollY;
-
     const progressBarWidth = (windowScroll / windowHeight).toFixed(2);
     progressBar.setAttribute('style', `transform: scaleX(${progressBarWidth})`);
-    console.log(progressBarWidth);
+
+    if(isPartiallyVisible(slider)) {
+        slider.classList.add('slider--active');
+    }
+
+    if(isPartiallyVisible(achievements)) {
+        achievements.classList.add('achievements--active');
+    }
+
 }
+
+function isPartiallyVisible(element) {
+    const elementBoundary = element.getBoundingClientRect();
+    const top = elementBoundary.top;
+    const bottom = elementBoundary.bottom;
+    const height = elementBoundary.height;
+
+    return (top + height >= 0 ) && (document.documentElement.clientHeight + height > bottom);
+}
+
+
 
 let counter = 0;
 const maxStep = slides.length - 1;

@@ -1,5 +1,13 @@
 .slider {
   position: relative;
+  transform: translateY(7em);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .slider-wrapper {
