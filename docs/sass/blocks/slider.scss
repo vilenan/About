@@ -41,6 +41,12 @@
   background-color: transparent;
   outline: 0;
   border: none;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+  }
 }
 
 .slider__btn.swiper-button-prev,
@@ -50,7 +56,5 @@
 
   @media (min-width: 768px) {
     display: block;
-
-
   }
 }
