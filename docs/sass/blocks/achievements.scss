@@ -8,15 +8,17 @@
     transform: translateY(0);
   }
 }
+
 .achievements-slider {
   position: relative;
   padding-bottom: 50px;
 }
 
-.achievements-slider.swiper{
+.achievements-slider.swiper {
+  width: 600px;
   height: 600px;
 
-  @media (max-width: 659px) {
+  @media (max-width: 767px) {
     width: 280px;
   }
 }
