@@ -13,6 +13,7 @@ const webp = require('gulp-webp');
 const svgstore = require("gulp-svgstore");
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
 
 //Styles
 
@@ -34,13 +35,26 @@ exports.styles = styles;
 
 //Html
 
-const html = () => {
-    return gulp.src('docs/*.html')
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('build'));
-}
+// const html = () => {
+//     return gulp.src('docs/*.html')
+//         .pipe(htmlmin({ collapseWhitespace: true }))
+//         .pipe(gulp.dest('build'));
+// }
+//
+// exports.html = html;
 
-exports.html = html;
+const fileInclude = (done)=> {
+    gulp.src('docs/*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file',
+
+        }))
+        .pipe(gulp.dest('build/'));
+    done();
+};
+
+exports.fileInclude = fileInclude;
 
 //Scripts
 
@@ -131,17 +145,17 @@ const reload = (done) => {
 const watcher = () => {
     gulp.watch("docs/sass/**/*.scss", gulp.series(styles));
     gulp.watch("docs/js/main.js", gulp.series(scripts));
-    gulp.watch("docs/*.html", gulp.series(html, reload));
+    gulp.watch("docs/**/*.html", gulp.series(fileInclude, reload));
 }
 
 const build = gulp.series(
     clean,
     copy,
     optimizeImages,
+    fileInclude,
     gulp.parallel(
         styles,
         scripts,
-        html,
         createWebp
     ),
 );
@@ -154,9 +168,10 @@ exports.default = gulp.series(
     clean,
     copy,
     copyImages,
+    fileInclude,
     gulp.parallel(
         styles,
-        html,
+
         scripts,
         createWebp
     ),
