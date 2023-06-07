@@ -22,9 +22,9 @@
 .about__image {
   position: relative;
   width: 100%;
+  max-width: 350px;
   align-self: center;
   display: flex;
-  max-width: 100%;
   -o-object-position: center;
   object-position: center;
   -o-object-fit: cover;
@@ -42,15 +42,20 @@
 }
 
 .about__text {
+  font-size: 16px;
   line-height: 1.64;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
   border-radius: 12px;
+  padding: 100px 20px 50px 20px;
+  margin-top: -60px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(74,34,137,.15);
 
   @media (min-width: 768px) {
+    margin-top: 0;
     max-width: 600px;
     min-height: 500px;
     padding: 50px 30px 50px 200px;
@@ -67,8 +72,7 @@
 }
 
 .about__text p {
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 10px;
   text-align: center;
 
   @media (min-width: 768px) {
@@ -76,7 +80,15 @@
   }
 }
 
-.about__rotate {
+.about__text p:first-child {
+  margin-bottom: 30px;
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about__rotate-element {
   display: none;
   animation-name: rotate;
   animation-duration: 6s;

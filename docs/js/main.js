@@ -38,7 +38,6 @@ function scrollHandler() {
     if(isPartiallyVisible(achievements)) {
         achievements.classList.add('achievements--active');
     }
-
 }
 
 function isPartiallyVisible(element) {
@@ -49,39 +48,6 @@ function isPartiallyVisible(element) {
 
     return (top + height >= 0 ) && (document.documentElement.clientHeight + height > bottom);
 }
-
-
-
-// let counter = 0;
-// const maxStep = slides.length - 1;
-// slides[counter].classList.add('slider-item--current');
-//
-// const isLast = (num) => {
-//     num === maxStep ? btnNext.setAttribute('disabled', 'true') : btnNext.removeAttribute('disabled')
-// };
-//
-// const isFirst = (num) => {
-//     num === 0 ? btnPrev.setAttribute('disabled', 'true') : btnPrev.removeAttribute('disabled')
-// };
-//
-// const onNextBtnClick = () => {
-//         slides[counter].classList.remove('slider-item--current');
-//         slides[counter].setAttribute('style', 'transform: translateX(0%);');
-//         counter++;
-//         isLast(counter);
-//         isFirst(counter);
-//         slides[counter].classList.add('slider-item--current');
-//     };
-// const onPrevBtnClick = () => {
-//         slides[counter].classList.remove('slider-item--current');
-//         slides[counter].removeAttribute('style');
-//         counter--;
-//         isLast(counter);
-//         isFirst(counter);
-//         slides[counter].classList.add('slider-item--current');
-//     };
-// btnNext.addEventListener('click', onNextBtnClick);
-// btnPrev.addEventListener('click', onPrevBtnClick);
 
 const swiperPortfolio = new Swiper('.slider__container', {
     // Optional parameters
@@ -95,15 +61,6 @@ const swiperPortfolio = new Swiper('.slider__container', {
         prevEl: '.slider__button--prev',
     },
     slidesPerView: 1,
-    // updateOnWindowResize: true,
-    // breakpoints: {
-    //     320: {
-    //         width: 280
-    //     },
-    //     768: {
-    //         width: 600
-    //     }
-    // }
 });
 
 const swiper = new Swiper('.achievements-slider', {

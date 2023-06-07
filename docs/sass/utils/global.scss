@@ -46,9 +46,9 @@ img {
   background: linear-gradient(168.68deg, #00D7B9 0%, #00BDD7 104.17%);
   border-radius: 4px;
   text-align: center;
-  width: 280px;
+  width: 100%;
   margin-top: 30px;
-  transition: background-color .5s, opacity .5s;
+  transition: background-color .5s, opacity .5s, box-shadow 0.3s ease;;
 
   @media (min-width: 1200px) {
     width: 300px;
@@ -57,8 +57,11 @@ img {
 
   &:hover {
     background: linear-gradient(168.68deg, #00BDD7 0%, #00D7B9 104.17%);
+    box-shadow: -2px -2px 0px 2px #00BDD7, 0px 0px 0px 4px #00D7B9;
   }
+
   &:active {
     opacity: 30%;
+    box-shadow: -1px -1px 0px 1px #00BDD7, 0px 0px 0px 2px #00D7B9;
   }
 }
